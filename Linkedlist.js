@@ -47,25 +47,16 @@ print(){
 let ll = new linkedList(); // Instance of new object
 let l2 = new linkedList();
 
-// ll.add(4)
-// //let ll = new linkedList()
-// ll.add(2)
-// let x; //input
-// do{
-//    x = readline.question("Enter the input")
-//    if(x>=0){
-//     ll.add(x)
-//    }
-// }while(x>0)
-// ll.print()
-console.log("First list")
-ll.add(2) //2 3 4
-ll.add(3)
+ll.add(4)
+//let ll = new linkedList()
 ll.add(2)
+let x; //input
+do{
+   x = readline.question("Enter the input")
+   if(x>=0){
+    ll.add(x)
+   }
+}while(x>0)
 ll.print()
-console.log("Second list")
-l2.add(3)
-l2.add(2)
-l2.add(3)
-l2.print()
+
 
