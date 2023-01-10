@@ -32,9 +32,10 @@ add(x){
 }
 
 
+//Inserting at a given position using size and two variables -> prev and current 
 
 insertAt(val, data){
-    if(val<=0){
+    if(val<=0 || val>this.size){
         // let node  = new Node(data)
         console.log("invalid")
     }
@@ -57,14 +58,15 @@ insertAt(val, data){
     }
 }
 
-
+//For displaying the values in each node
 print(){
     let temp  = this.head;
     while(temp.next!=null){
         console.log(temp.data)
         temp = temp.next
     }
-   console.log(temp.data)
+   console.log(temp.data)  // to print the last element of the list 
+   console.log(`the size is ${this.size}`)
 }
 }
 
@@ -72,5 +74,19 @@ let ll = new linkedl()
 ll.add(5)
 ll.add(6)
 ll.add(7)
-ll.insertAt(2,4)
+// ll.insertAt(1,4) //static input
+//dynamcially getting the input for insering at a position
+ind = readline.question("Enter the index at where to be inserted")
+val = readline.question("Enter the value to be inserted")
+ll.insertAt(ind,val)
 ll.print()
+
+
+// do{
+//     x = readline.question("Enter the value if its negative input will be terminated")
+//     if(x>=0);
+//     {
+//         ll.add(x)
+//     }
+// }while(x>0)
+// ll.print()
